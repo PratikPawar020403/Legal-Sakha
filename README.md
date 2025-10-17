@@ -1,7 +1,7 @@
 Lega-Sakha 
 # Indian Legal AI Assistant
 
-AI-powered chatbot for querying 60+ Indian legal documents with accurate citations.
+AI-powered chatbot for querying 40+ Indian legal documents with accurate citations.
 
 ## Features
 
