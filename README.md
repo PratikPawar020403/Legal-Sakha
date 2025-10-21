@@ -1,7 +1,7 @@
-Lega-Sakha 
+# Legal-Sakha 
 # Indian Legal AI Assistant
 
-AI-powered chatbot for querying 40+ Indian legal documents with accurate citations.
+AI-powered chatbot for querying Indian legal documents with accurate citations.
 
 ## Features
 
@@ -19,20 +19,36 @@ AI-powered chatbot for querying 40+ Indian legal documents with accurate citatio
 - **UI**: Gradio
 - **Platform**: Google Colab (T4 GPU)
 
+## 📚 Dataset
+
+**Drive link for Legal Documents**: "https://drive.google.com/drive/folders/1sZsDxZxz203ZYGI_2vS0rvwxXgod6vxk?usp=sharing"
+
+Contains 40+ official Indian legal documents including:
+- Indian Constitution
+- Bharatiya Nyaya Sanhita (BNS) 2023
+- Online Gaming Act 2023
+- and more ...
+
 ## Setup
 
-1. Mount Google Drive with PDFs
-2. Install dependencies
-3. Load models and process documents
-4. Build FAISS index
-5. Launch Gradio interface
+1. **Download legal documents** from the link above and upload to your Google Drive
+2. **Mount Google Drive** with PDFs in Colab
+3. **Install dependencies**: Run the requirements cell
+4. **Load models** and process documents
+5. **Build FAISS index** from document embeddings
+6. **Launch Gradio interface**
 
 ## Usage
 
 Ask legal questions in plain language → Get answers with relevant act/section references.
 
+**Example queries**:
+- "What are the fundamental rights in Indian Constitution?"
+- "Explain Section 103 of BNS 2023"
+- "Online gaming regulations in India"
+
 ## Requirements
 
 - Google Colab (Free T4)
 - Google Drive
-- 40+ Indian legal PDFs
+- Indian legal PDFs (drive link provided above)
