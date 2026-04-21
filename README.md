@@ -1,54 +1,66 @@
-# Legal-Sakha 
+# Legal-Sakha ⚖️
 # Indian Legal AI Assistant
 
 AI-powered chatbot for querying Indian legal documents with accurate citations.
 
-## Features
+---
 
-- RAG-based Q&A system for Indian laws (Constitution, BNS, Online Gaming Act, etc.)
-- Semantic search with FAISS vector database
-- Conversational memory and streaming responses
-- OCR support for scanned PDFs
-- Act/section citations with explanations
+## 🌐 Try it Online
 
-## Tech Stack
+**Live demo (no setup needed):** [Legal-Sakha on Hugging Face Spaces](https://huggingface.co/spaces/pp22/Legal-Sakha)
 
-- **LLM**: Gemma 3n E4B (GGUF)
-- **Embeddings**: BGE (BAAI)
-- **Vector DB**: FAISS
-- **UI**: Gradio
-- **Platform**: Google Colab (T4 GPU)
+Bring your own API key (OpenAI / Groq / Gemini) — it is never stored.
 
-## 📚 Dataset
+---
 
-**Drive link for Legal Documents**: "https://drive.google.com/drive/folders/1sZsDxZxz203ZYGI_2vS0rvwxXgod6vxk?usp=sharing"
+## 🖥️ Run Offline (Google Colab + GPU)
+
+For full GPU-accelerated performance on your own documents:
+
+1. **Download legal documents** from the Drive link below and place them in your Google Drive
+2. Open the notebook in **Google Colab** (Runtime → T4 GPU)
+3. Mount Google Drive and set your PDF folder path
+4. Run all cells — the vector DB builds automatically
+5. Use the Gradio UI that launches at the end
+
+**Drive link for Legal Documents:**
+[https://drive.google.com/drive/folders/1sZsDxZxz203ZYGI_2vS0rvwxXgod6vxk?usp=sharing](https://drive.google.com/drive/folders/1sZsDxZxz203ZYGI_2vS0rvwxXgod6vxk?usp=sharing)
 
 Contains 40+ official Indian legal documents including:
 - Indian Constitution
 - Bharatiya Nyaya Sanhita (BNS) 2023
+- Bharatiya Nagarik Suraksha Sanhita (BNSS) 2023
+- POCSO Act
+- NDPS Act
+- IT Act
 - Online Gaming Act 2023
-- and more ...
+- and more...
 
-## Setup
+---
 
-1. **Download legal documents** from the link above and upload to your Google Drive
-2. **Mount Google Drive** with PDFs in Colab
-3. **Install dependencies**: Run the requirements cell
-4. **Load models** and process documents
-5. **Build FAISS index** from document embeddings
-6. **Launch Gradio interface**
+## Features
 
-## Usage
+- RAG-based Q&A grounded in real legal documents
+- Semantic search with FAISS vector database
+- Streaming responses with source citations
+- Supports OpenAI, Groq, and Gemini providers
+- Works online (HF Spaces) and offline (Colab + GPU)
 
-Ask legal questions in plain language → Get answers with relevant act/section references.
+## Tech Stack
 
-**Example queries**:
-- "What are the fundamental rights in Indian Constitution?"
-- "Explain Section 103 of BNS 2023"
-- "Online gaming regulations in India"
+| Component    | Technology                        |
+|-------------|-----------------------------------|
+| Embeddings  | BAAI/bge-large-en-v1.5            |
+| Vector DB   | FAISS                             |
+| UI          | Gradio                            |
+| Online      | Hugging Face Spaces (CPU)         |
+| Offline     | Google Colab (T4 GPU)             |
+| Providers   | OpenAI · Groq · Gemini            |
 
-## Requirements
+## Example Queries
 
-- Google Colab (Free T4)
-- Google Drive
-- Indian legal PDFs (drive link provided above)
+- *"At what age is a child exempt from criminal liability?"*
+- *"What are the fundamental rights in the Indian Constitution?"*
+- *"Explain Section 103 of BNS 2023"*
+- *"What are the cybercrime provisions under the IT Act?"*
+- *"Online gaming regulations in India"*
